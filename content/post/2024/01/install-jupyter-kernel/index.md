@@ -1,33 +1,39 @@
 ---
 title: 安装 Jupyter kernel
 date: 2024-01-06
+lastmod: 2025-12-30T13:16:35+08:00
 tags:
  - jupyter
 categories: computer
 image: Jupyter.svg
 ---
 
-Jupyter 是一个对于交互式编程十分友好的工具。
+Jupyter 是一个交互式编程工具。
 
 <!--more-->
 
-Jupyter 是使用 Python 开发的 Web 程序，
-最初为了支持 Python 在科学计算方面的应用，
+Jupyter 是使用 Python 开发的 Web 程序，最初为了支持 Python 在科学计算方面的应用，
 之后开发人员为 Jupyter 添加了很多内核，使其可以支持更多编程语言，具体参考
-<https://github.com/jupyter/jupyter/wiki/Jupyter-kernels>
-。
+<https://github.com/jupyter/jupyter/wiki/Jupyter-kernels>。
 
 ## 安装 Jupyter
 
-早期的 Jupyter 环境是 notebook ，现在推荐使用 lab 。
-首先要有 Python 环境（可以创建一个虚拟环境），使用 pip 安装
+~~早期的 Jupyter 环境是 notebook ，现在推荐使用 lab 。~~
+jupyter 默认环境浏览器体验较差，推荐使用 vscode + jupyter 插件，集成了 jupyter 程序，只需提供 jupyter kernel。
+
+> 这里区分一下 jupyter 和 jupyter kernel，二者是不一样的概念：
+> jupyter 是一个 web 程序，提供了交互功能，更多的是指前端内容。
+> 而 jupyter kernel 是后端服务，任何实现 jupyter kernel 接口的程序都可以作为 jupyter kernel 使用。
+> 例如 Python 的 ipykernel，Julia 的 IJulia 等等。
+
+~~首先要有 Python 环境（可以创建一个虚拟环境），使用 pip 安装~~
 
 ```bash
 pip install jupyterlab
 ```
 
-等待安装完成。
-jupyterlab 自带一个默认的 Python 内核，名为 `ipykernel` 。
+~~等待安装完成。~~
+~~jupyterlab 自带一个默认的 Python 内核，名为 `ipykernel` 。~~
 
 ## 内核操作
 
@@ -52,6 +58,13 @@ jupyter kernelspec remove {name}
 ```bash
 pip install ipykernel
 python -m ipykernel install --user --name {} --display-name {}
+```
+
+这个方法是全局安装 kernel，方便 jupyter 检测。另外可以在当前环境安装，vscode 可以直接使用。
+推荐使用 `uv` 作为项目管理工具：
+
+```bash
+uv add --dev ipykernel nbformat
 ```
 
 #### Julia
