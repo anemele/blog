@@ -119,8 +119,6 @@ else:
 
 ## 附件
 
-[^q2.py]: [附件：问题二完善程序](q2.py)
-[^q3.py]: [附件：问题三 MD5 爆破程序](q3.py)
 [^what.png]: [附件：what.png](what.png)
 [^what.zip]: [附件：what.zip](what.zip)
 [^what2.zip]: [附件：what2.zip](what2.zip)
