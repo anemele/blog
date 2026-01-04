@@ -1,5 +1,5 @@
 # Change baseurl before deploy
-baseurl = "https://anemele.github.io/"
+baseurl = "https://anemele.github.io/blog"
 languageCode = "en-us"
 pagination.pagerSize = 5
 title = "Jason Swift's blogs"
