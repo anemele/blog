@@ -1,7 +1,7 @@
 ---
 title: 安装 Jupyter kernel
 date: 2024-01-06
-lastmod: 2025-12-30T13:16:35+08:00
+lastmod: 2026-01-05T18:13:43+08:00
 tags:
  - jupyter
 categories: computer
@@ -19,7 +19,17 @@ Jupyter 是使用 Python 开发的 Web 程序，最初为了支持 Python 在科
 ## 安装 Jupyter
 
 ~~早期的 Jupyter 环境是 notebook ，现在推荐使用 lab 。~~
-jupyter 默认环境浏览器体验较差，推荐使用 vscode + jupyter 插件，集成了 jupyter 程序，只需提供 jupyter kernel。
+
+~~jupyter 默认环境浏览器体验较差，推荐使用 vscode + jupyter 插件，集成了 jupyter 程序，只需提供 jupyter kernel。~~
+
+更新：当前最佳实践是，使用 uv 管理一个「全局」虚拟环境，将 jupyter 作为 dev 依赖。例如
+
+```bash
+uv init pyenv-scic
+cd pyenv-scic
+uv add --dev jupyter jupyterlab nbformat anywidget
+uv add numpy scipy sympy matplotlib plotly pandas
+```
 
 > 这里区分一下 jupyter 和 jupyter kernel，二者是不一样的概念：
 > jupyter 是一个 web 程序，提供了交互功能，更多的是指前端内容。
