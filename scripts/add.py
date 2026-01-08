@@ -50,15 +50,16 @@ def interactive_add(config: Config):
     now = now.replace(microsecond=0).isoformat()
     title_tmpl = dedent(f"""\
     ---
-    title: name
+    title:
+    description:
     date: {now}
     lastmod: {now}
     draft: true
     tags:
-    - tag
+    -
     categories:
-    - category
-    ---\n\n
+    ---
+    \n
     """)
 
     rel_path = post_path.relative_to(this_path)

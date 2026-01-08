@@ -1,5 +1,6 @@
 ---
 title: SHA1 碰撞
+description: 2017 年谷歌发布一篇文章公布了首个 SHA1 碰撞案例……
 date: 2023-05-20T05:56:49+08:00
 tags:
  - SHA1

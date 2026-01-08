@@ -1,5 +1,8 @@
 ---
 title: PNG alpha channel processing
+description:
+    PNG 图片 alpha 通道处理，即透明度如何影响图片显示，
+    也就是之前在「幻影坦克图片原理」里面提到的「PNG 混色原理」。
 date: 2025-02-07
 lastmod: 2025-02-07
 math: true
@@ -8,10 +11,6 @@ tags:
  - alpha channel
 categories: Image processing
 ---
-
-PNG 图片 alpha 通道处理，即透明度如何影响图片显示，也就是之前在
-[幻影坦克图片原理](/post/mirage-tank)
-里面提到的「PNG 混色原理」。
 
 <!--more-->
 

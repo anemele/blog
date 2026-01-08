@@ -1,16 +1,15 @@
 ---
-title: "Stack Overflow"
+title: Stack Overflow
+description: 本博客记录一次编写 Rust 程序时遇到的堆栈溢出错误。
 date: 2025-03-17
 lastmod: 2025-03-17
 tags:
  - stack
- - stackoverflow
+ - os
  - rust
  - c
 categories: os
 ---
-
-本博客记录一次编写 Rust 程序时遇到的堆栈溢出错误。
 
 ## 背景介绍
 

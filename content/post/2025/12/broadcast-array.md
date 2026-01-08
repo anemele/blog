@@ -1,5 +1,6 @@
 ---
-title: 数组计算的广播机制 / broadcast in array computation
+title: 数组计算的广播机制
+description: 整理以前对于数组计算广播机制的研究。
 date: 2025-12-20T14:28:11+0800
 lastmod: 2025-12-20T16:17:11+0800
 draft: false
@@ -9,8 +10,6 @@ tags:
 categories:
  - Computer
 ---
-
-> 整理以前对于数组计算广播机制的研究。
 
 广播是数组计算的利器。
 

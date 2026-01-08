@@ -1,5 +1,6 @@
 ---
 title: 贝塞尔曲线 Bézier/Bezier curve
+description: 整理对「贝塞尔曲线」的研究
 date: 2025-12-20T02:56:29+0800
 lastmod: 2025-12-20T02:56:29+0800
 draft: false

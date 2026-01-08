@@ -1,5 +1,6 @@
 ---
 title: 记一次文件误删
+description: 昨天误删了一个源码文件，这并不可怕，可怕的是在这个命令前还有两个命令……
 date: 2025-12-21T13:44:07+08:00
 lastmod: 2025-12-21T13:44:07+08:00
 draft: false
@@ -12,8 +13,8 @@ categories:
 - engineering
 ---
 
-昨天误删了一个源码文件，而且是 cmd `del play.py`。
-这并不可怕，可怕的是在这个命令前还有两个命令：
+昨天误删了一个源码文件，cmd 执行 `del play.py`。
+这并不可怕，可怕的是在这个命令前还有两个命令
 `gh repo delete --yes composer` 和 `rd /s/q .git`。
 这下是完全抹去了。啊啊啊！
 

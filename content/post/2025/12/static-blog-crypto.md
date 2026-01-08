@@ -1,5 +1,6 @@
 ---
-title: 静态博客也能加密？
+title: 静态博客加密
+description: 静态博客也能加密？
 date: 2025-12-08T23:22:46+0800
 lastmod: 2026-01-04T20:12:37+08:00
 draft: false
