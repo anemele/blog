@@ -28,7 +28,7 @@ cat ~/.ssh/id_rsa.pub # 带 pub 后缀的才是公钥！
 之后就可以使用 SSH 协议推拉仓库了，例如原先是 `https://github.com/xx/yy`，可以改用
 `git@github.com:xx/yy`。
 
-另外，如果需要多平台配置密钥，需要添加对应的配置，例如 gitlab
+另外，如果需要多平台配置密钥，需要在 `~/.ssh/config` 添加对应的配置，例如 gitlab
 
 ```text
 Host github.com
