@@ -2,7 +2,7 @@
 title: Fibonacci 数算法
 description:
 date: 2026-07-22T10:06:40+08:00
-lastmod: 2026-07-22T10:06:40+08:00
+lastmod: 2026-07-29T20:54:06+08:00
 tags:
 - Fibonacci
 - dynamic programming
@@ -127,7 +127,38 @@ end
 一行流
 
 ```julia
-fib(n)=(big.([1 1;1 0])^(n-1))[1]
+fib(n)=big.([1 1;1 0])^(n-1)|>first
+```
+
+Pure Python implementation
+(实测速度远低于 Julia，仅作为条件不足的备选。)
+
+```python
+type M = tuple[int, int, int, int]
+type UInt = int
+
+def matrix_mul(m1: M, m2: M) -> M:
+  return (
+    m1[0] * m2[0] + m1[1] * m2[2],
+    m1[0] * m2[1] + m1[1] * m2[3],
+    m1[2] * m2[0] + m1[3] * m2[2],
+    m1[2] * m2[1] + m1[3] * m2[3],
+  )
+
+def fast_power(m: M, p: UInt) -> M:
+  ret = (1, 0, 0, 1)
+  while p:
+    if p & 1:
+      ret = matrix_mul(ret, m)
+    m = matrix_mul(m, m)
+    p >>= 1
+  return ret
+
+def fib(n: UInt) -> UInt:
+  if n < 1:
+    return 0
+  tmp = fast_power((1, 1, 1, 0), n - 1)
+  return tmp[0]
 ```
 
 幂运算一般是快速幂算法实现。
